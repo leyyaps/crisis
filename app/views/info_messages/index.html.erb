@@ -1,0 +1,10 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Message</h1>
+    <% @info_messages.each do |info_message| %>
+      <p><%= info_message.message %></p>    
+   
+  <% end %>
+
+</div>

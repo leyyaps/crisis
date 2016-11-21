@@ -1,0 +1,41 @@
+<div class="hero-unit hero-3 animated fadeIn">
+  <div class="container hero-content">
+      <h1>EVENTS</h1>
+      <h2>All the latest info on upcoming events from CRISIS.</h2>
+    
+
+  </div>
+</div>
+
+<div class="container animated fadeIn">
+<p id="notice"><%= notice %></p>
+
+
+
+<% @events.each do |event| %>
+<div class="row is-flex post">
+    <div class="col-md-5">
+      <%= image_tag event.main_image_url(:thumb),:alt => "CRISIS Event", :class => "img-fluid" if event.main_image? %>
+    </div>
+    <div class="col-md-7 post-content">
+      <h2 class="news-title"><%= event.name %></h2>
+      <h3><%= event.date.strftime("%d/%m/%Y") %></h3>
+      <p class="doors-open"><small>Doors Open: <%= event.start_time.to_s(:time)  %></small></p>
+      <hr class="style-1">
+      <p><%= event.description %></p>
+      <hr class="style-1">
+      <div class="event-btns">
+        <a href="tickets" class="btn btn-primary">Tickets</a>
+        <a href="socials" class="btn btn-secondary">Organise Social</a>
+      </div>
+
+
+
+    </div>
+    <hr>
+</div>
+<% end %>
+
+
+</div>
+

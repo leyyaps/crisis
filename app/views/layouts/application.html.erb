@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Crisis</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-light bg-faded">
+      <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+    
+
+        <%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand") %>
+
+        <ul class="nav navbar-nav float-lg-right">
+          <li class="nav-item active">
+            <%= link_to 'Home', root_url, :class =>'nav-link hvr-underline-reveal' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'About', about_url, :class =>'nav-link hvr-underline-reveal' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'News', posts_url, :class =>'nav-link hvr-underline-reveal' %>
+          </li>
+         
+          <li class="nav-item">
+            <%= link_to 'Tickets', tickets_url, :class =>'nav-link hvr-underline-reveal' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Events', events_url, :class =>'nav-link hvr-underline-reveal' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Socials', socials_url, :class =>'nav-link hvr-underline-reveal' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Jobs', jobs_url, :class =>'nav-link hvr-underline-reveal' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Lost Property', lostproperty_url, :class =>'nav-link hvr-underline-reveal' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Contact', contact_url, :class =>'nav-link hvr-underline-reveal' %>
+          </li>
+         
+          
+        </ul>
+        
+      </div>
+    </nav>
+    <%= yield %>
+
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <p><%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand") %></p>
+       
+        <p class="footer-links">
+
+          <%= link_to 'Home', root_url %>
+          ·
+          <%= link_to 'About', about_url %>
+          .
+          <%= link_to 'News', posts_url %>
+          ·
+          <%= link_to 'Tickets', tickets_url %>
+          ·
+          <%= link_to 'Events', events_url %>
+          ·
+          <%= link_to 'Socials', socials_url %>
+          ·
+          <%= link_to 'Jobs', jobs_url %>
+          .
+          <%= link_to 'Lost Property', lostproperty_url %>
+          .
+          <%= link_to 'Contact', contact_url %>
+        </p>
+        <p class="footer-company-name"><a href="http://www.carpenoctum.co.uk">Carpe Noctum Ltd</a> &copy; 2012</p>
+      
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>CRISIS, 8 Talbot Street</span> Nottingham</p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>0330 332 0611</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:info@carpenoctum.co.uk">info@carpenoctum.co.uk</a></p>
+        </div>
+
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
+        <div class="footer-icons">
+          <a href="https://facebook.com/ilovecrisis"><i class="fa fa-facebook"></i></a>
+          <a href="https:/twitter.com/ilove_crisis"><i class="fa fa-twitter"></i></a>
+          <a href="https://plus.google.com/+crisisnottingham"><i class="fa fa-google-plus"></i></a>
+          <a href="https://instagram.com/crisisnottingham"><i class="fa fa-instagram"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </body>
+</html>

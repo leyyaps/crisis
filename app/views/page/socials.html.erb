@@ -1,0 +1,81 @@
+<div class="hero-unit hero-2">
+  <div class="container hero-content">
+        <h1>Socials</h1>
+        <h2>Organising a social for your team, club or society group</h2>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 spacer">
+      <h1>TICKETS FOR SOCIALS</h1>
+      <p>Tickets for pre-arranged socials can be purchased below. You will need a code to access your tickets. These can be obtained from your group organiser eg. Social Sec</p>
+
+      <div id="ts-shop"></div>
+
+      <%= link_to 'Ticket Terms and Conditions', root_url, :class =>'btn btn-secondary spacer' %>
+      
+    </div>
+    <div class="col-md-6 spacer">
+      <h2>SOCIAL BOOKING FORM</h2>
+      <p>Thinking of organising an event for your club, team or society? Please fill in this form and we will be in touch asap to help you with everything you need!</p>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We never share your email with anyone else.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="tel">Mobile Number</label>
+          <input type="tel" class="form-control" id="tel" aria-describedby="telHelp" placeholder="Enter your mobile number">
+          <small id="telHelp" class="form-text text-muted">We never share your mobile with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="group">Your club, group or society</label>
+          <input type="text" class="form-control" id="group" aria-describedby="groupHelp" placeholder="The name of your group e.g. Law Soc or Hu-Stu JCR">
+        </div>
+        <div class="form-group">
+          <label for="groupSize">Estimated number of people</label>
+          <input type="number" class="form-control" id="groupSize" aria-describedby="groupSizeHelp" placeholder="Best guess at the group size">
+        </div>
+        <div class="form-group">
+          <label for="date">Date you were thinking of coming</label>
+          <input type="date" class="form-control" id="date" aria-describedby="dateHelp" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Event</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Enter your message. Please do not use for lost property."></textarea>
+        </div>
+
+        <p>We aim to respond to all booking forms within 4hrs during office hours and 48hours outside these times</p>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+    var Ticketscript={};
+    Ticketscript.Application={
+     containerId:"ts-shop",
+
+       channel:"QCCZ58WV",
+        eventId:"",
+        type:"iframe",
+        language:"en",
+        width:"555",
+        height:"600"
+    };
+</script>
+<script type="text/javascript" src="https://shop.ticketscript.com/assets/js/ga-embed.js"></script>

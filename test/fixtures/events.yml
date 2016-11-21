@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date: 2016-11-10
+  start_time: 2016-11-10 16:23:48
+  description: MyText
+  main_image: MyString
+  cover_image: MyString
+  date_to_list_event: 2016-11-10 16:23:48
+  short_description: MyText
+
+two:
+  name: MyString
+  date: 2016-11-10
+  start_time: 2016-11-10 16:23:48
+  description: MyText
+  main_image: MyString
+  cover_image: MyString
+  date_to_list_event: 2016-11-10 16:23:48
+  short_description: MyText

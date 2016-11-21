@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @event.start_time %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Main image:</strong>
+  <%= image_tag(@event.main_image_url, width: 400) if @event.main_image.present? %>
+</p>
+
+<p>
+  <strong>Cover image:</strong>
+  <%= image_tag(@event.cover_image_url) if @event.cover_image.present? %>
+</p>
+
+<p>
+  <strong>Date to list event:</strong>
+  <%= @event.date_to_list_event %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @event.short_description %>
+</p>
+
+
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,83 @@
+<div id="homepage-event-carousel" class="carousel slide animated fadeIn" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#homepage-event-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#homepage-event-carousel" data-slide-to="1"></li>
+    <li data-target="#homepage-event-carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+  <% @events.each_with_index do |event, index| %>
+    <div class="carousel-item <% if index == 0 %>active<% end %>">
+      <%= image_tag event.cover_image_url(:thumb) if event.cover_image? %>
+    </div>
+<% end %>
+    
+  </div>
+  <a class="left carousel-control" href="#homepage-event-carousel" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#homepage-event-carousel" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="light-grey-band animated slideInLeft">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-block">
+          <h2 class="text-uppercase white-background">The UKs <span style="display: inline-block;" class="animated pulse infinite">Biggest</span> Weekly Student Night</h2>
+          <p class="lead text-center">Welcome to the <strong>biggest</strong> and <strong>best</strong> student night in the UK. Every Wednesday CRISIS take over Rock City to bring you the ultimate party and Official Wednesday Student Night for Nottingham University .</p>
+        </div>
+      </div>
+  </div>   
+</div>   
+
+<div class="container">
+  <div class="card-deck-wrapper">
+    <div class="card-deck">
+      <% @events.each_with_index do |event, index| %>
+      <div class="card animated slideInUp">
+        <%= image_tag event.main_image_url(:thumb), :class =>"img-fluid card-img-top", :alt => "CRISIS Event" if index <= 3 %>
+        <div class="card-block text-block">
+          <h4 class="card-title text-uppercase"><%= event.name %></h4>
+          <h6 class="text-uppercase card-event-date"><%= event.date.strftime("%d/%m/%Y") %></h6>
+          <p class="card-text"><%= event.short_description %></p>
+          <%= link_to 'Tickets', tickets_url, :class =>'btn btn-primary text-uppercase' %>
+        </div>
+      </div>
+      <% end %>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="light-grey-band">
+  <div class="container">
+    <div class="row icon-band">
+     <div class="col-md-3 text-block">
+        <%= image_tag("photos-icon.svg", :alt => "Photos Icon", :class => "icons") %>
+       <h4 class="icon-titles">Photos</h4>
+       <p>A taster of what its like on Wednesdays at CRISIS in Nottingham</p>
+     </div>
+
+     <div class="col-md-3 text-block">
+        <%= image_tag("ticket-icon.svg", :alt => "Ticket Icon", :class => "icons") %>
+       <h4 class="icon-titles">Tickets</h4>
+       <p>Pick up tickets to Nottingham's favourite student night</p>
+     </div>
+     <div class="col-md-3 text-block">
+        <%= image_tag("group-social.svg", :alt => "Social Icon", :class => "icons") %>
+       <h4 class="icon-titles">Socials</h4>
+       <p>Are you part of a team, club or society organisation? We can help sort out your social to CRISIS.</p>
+     </div>
+     <div class="col-md-3 text-block">
+        <%= image_tag("events-calendar-icon.svg", :alt => "Events Calendar Icon", :class => "icons") %>
+       <h4 class="icon-titles">Events</h4>
+       <p>Find out about CRISIS events coming up soon</p>
+     </div>
+    </div>    
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="hero-unit animated fadeIn">
+  <div class="container hero-content">
+      <h1>NEWS</h1>
+      <h2>The latest announcements from the team here at CRISIS.</h2>
+
+  </div>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<div class="container animated fadeIn">
+  <% @posts.each do |post| %>
+    <div class="row is-flex post">
+      <div class="col-xs-6 col-md-4">
+        
+        <%= image_tag post.newsImage_url(:thumb),:alt => "News Item", :class => "img-fluid" if post.newsImage? %>
+        
+      </div>
+      <div class="col-xs-12 col-md-8 post-content">
+        <h2 class="news-title"><%= post.title %></h2>
+        <h5 class="updated">Updated: <%= post.date.strftime("%d/%m/%Y") %></h5>
+        <hr class="style-1">
+        <p><%= post.text %></p>
+      </div>
+      <hr>
+    </div>
+  <% end %>
+
+</div>

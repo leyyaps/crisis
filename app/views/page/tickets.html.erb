@@ -1,0 +1,130 @@
+<div id="homepage-event-carousel" class="carousel slide animated fadeIn" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#homepage-event-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#homepage-event-carousel" data-slide-to="1"></li>
+    <li data-target="#homepage-event-carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+  <% @events.each_with_index do |event, index| %>
+    <div class="carousel-item <% if index == 0 %>active<% end %>">
+      <%= image_tag event.cover_image_url(:thumb) if event.cover_image? %>
+    </div>
+<% end %>
+    
+  </div>
+  <a class="left carousel-control" href="#homepage-event-carousel" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#homepage-event-carousel" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="container">
+  <div class="event-message">
+  <% @info_messages.each do |info_message| %>
+    <p class="lead"><%= info_message.message %></p>
+  <% end %>
+
+  </div>
+  <div class="ticket-advice">
+    <button class="btn btn-secondary cant-find" data-toggle="modal" data-target="#ticketing-info">Can't find a ticket?</button>
+
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="ticketing-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Can't get hold of a ticket?</h4>
+        </div>
+        <div class="modal-body">
+          <p class="grey-text">Don't worry there are other ways to find tickets and get in...</p>
+          <h6 class="red">SU BOX OFFICE</h6>
+          <p class="grey-text">Tickets are released from the SU Box Office in The Portland Building from the Thursday before the coming Wednesday night</p>
+          <h6 class="red">WEDNESDAY MORNING RESALES</h6>
+          <p class="grey-text">On Wednesday mornings around 9am ish we release any unsold tickets from allocations held back for teams, groups, socials. Usually there are 30-50 tickets put back on sale. </p>
+          <h6 class="red">PAY ON DOOR</h6>
+          <p class="grey-text">Every Wednedsay we have tickets on sale at the door. Usually from 9pm/9:30pm. Please check individual event times for exact info. There are no pass-outs unfortunately so once you are in, you are in.</p>
+          <h6 class="red">RESELLER SITES</h6>
+          <p class="grey-text">We are aware of ticket reselling occuring on sites such as "BUY/SELL TICKETS" on Facebook. As part of our ticketing policy we <strong>cannot accept resold tickets</strong> since we have no guarantee we will be able to scan them or if the seller has resold that ticket to more than one person. If you choose this route Carpe Noctum accept no responsibilty for your admission and you may be turned away if the ticket fails to scan or if it has already been used.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+  
+<div class="container">
+  <div id="ts-shop"></div>
+</div>
+
+<div class="container">
+  <div class="row terms">
+    <div class="col-md-10 offset-sm-1 hid">
+      <div class="row">
+        <div class="col-md-6 offset-sm-3 text-xs-center">
+            <%= link_to 'Ticket Terms and Conditions', root_url, :class =>'btn btn-secondary' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="light-grey-band">
+  <div class="container">
+    <div class="row icon-band">
+     <div class="col-md-3 text-block">
+        <%= image_tag("photos-icon.svg", :alt => "Photos Icon", :class => "icons") %>
+       <h4 class="icon-titles">Photos</h4>
+       <p>A taster of what its like on Wednesdays at CRISIS in Nottingham</p>
+     </div>
+
+     <div class="col-md-3 text-block">
+        <%= image_tag("ticket-icon.svg", :alt => "Ticket Icon", :class => "icons") %>
+       <h4 class="icon-titles">Tickets</h4>
+       <p>Pick up tickets to Nottingham's favourite student night</p>
+     </div>
+     <div class="col-md-3 text-block">
+        <%= image_tag("group-social.svg", :alt => "Social Icon", :class => "icons") %>
+       <h4 class="icon-titles">Socials</h4>
+       <p>Are you part of a team, club or society organisation? We can help sort out your social to CRISIS.</p>
+     </div>
+     <div class="col-md-3 text-block">
+        <%= image_tag("events-calendar-icon.svg", :alt => "Events Calendar Icon", :class => "icons") %>
+       <h4 class="icon-titles">Events</h4>
+       <p>Find out about CRISIS events coming up soon</p>
+     </div>
+    </div>    
+  </div>
+</div>
+
+<script type="text/javascript">
+     var Ticketscript={};
+     Ticketscript.Application={
+         containerId:"ts-shop",
+         channel:"H7QPQ4F8",
+         eventId:"",
+         type:"iframe",
+         language:"en",
+         width:"1170",
+         height:"auto"
+     };
+</script>
+<script type="text/javascript" src="https://shop.ticketscript.com/assets/js/ga-embed.js"></script>
+
+
