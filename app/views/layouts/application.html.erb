@@ -16,12 +16,12 @@
   </head>
   
   <body>
-    <nav class="navbar navbar-light bg-faded">
+    <nav class="navbar navbar-dark bg-inverse">
       <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
       <div class="collapse navbar-toggleable-md" id="navbarResponsive">
     
 
-        <%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand") %>
+        <%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand hidden-sm-down") %>
 
         <ul class="nav navbar-nav float-lg-right">
           <li class="nav-item active">
@@ -60,9 +60,58 @@
     </nav>
     <%= yield %>
 
+    <!-- <nav class="navbar navbar-full navbar-light bg-faded">
+      <div class="row">
+        <div class="col-md-6">
+      <%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand") %>
+      <ul>
+        <li class="nav-item"><%= link_to 'Home', root_url %></li>
+        <li class="nav-item"><%= link_to 'About', about_url %></li>
+        <li class="nav-item"><%= link_to 'News', posts_url %></li>
+        <li class="nav-item"><%= link_to 'Tickets', tickets_url %></li>
+        <li class="nav-item"><%= link_to 'Events', events_url %></li>
+        <li class="nav-item"><%= link_to 'Socials', socials_url %></li>
+        <li class="nav-item"><%= link_to 'Jobs', jobs_url %></li>
+        <li class="nav-item"><%= link_to 'Lost Property', lostproperty_url %></li>
+        <li class="nav-item"><%= link_to 'Contact', contact_url %></li>
+      </ul>
+      
+      </div>
+      <div class="col-md-3">
+        
+        <p class="footer-company-name"><a href="http://www.carpenoctum.co.uk">Carpe Noctum Ltd</a> &copy; 2012</p>
+        
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>CRISIS, 8 Talbot Street</span> Nottingham</p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>0330 332 0611</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:info@carpenoctum.co.uk">info@carpenoctum.co.uk</a></p>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        
+
+
+      </div>
+      
+  
+
+      
+    
+  </div>
+</nav>
+ -->
+
     <footer class="footer-distributed">
       <div class="footer-left">
-        <p><%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand") %></p>
+        <p><%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand footer-brand") %></p>
        
         <p class="footer-links">
 
@@ -74,15 +123,7 @@
           ·
           <%= link_to 'Tickets', tickets_url %>
           ·
-          <%= link_to 'Events', events_url %>
-          ·
-          <%= link_to 'Socials', socials_url %>
-          ·
-          <%= link_to 'Jobs', jobs_url %>
-          .
-          <%= link_to 'Lost Property', lostproperty_url %>
-          .
-          <%= link_to 'Contact', contact_url %>
+        
         </p>
         <p class="footer-company-name"><a href="http://www.carpenoctum.co.uk">Carpe Noctum Ltd</a> &copy; 2012</p>
       

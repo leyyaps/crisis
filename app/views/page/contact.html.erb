@@ -1,4 +1,4 @@
-<div class="hero-unit hero-2">
+<div class="hero-unit hero-2 animated fadeIn">
   <div class="container hero-content">
         <h1>Contact Us</h1>
         <h2>Answers to all your CRISIS related questions</h2>
@@ -8,8 +8,8 @@
 
 
     
-<div class="container faqs">
-<h3>Some common answers for you first...</h3>
+<div class="container faqs animated fadeIn hidden-xs-down">
+<h3>Some common questions for you first...</h3>
   <div class="row">
     
 
@@ -121,7 +121,7 @@
               </div>
             </div> 
             <div class="face back"> 
-              <div class="well well-sm inner">Yes - Every week. You can keep up to date on our paying queue length on our snapchat (wearecrisis) or <a class="links" href="https://www.twitter.com/ilove_crisis">twitter</a> feed.</div>
+              <div class="well well-sm inner">Yes - Every week. It's usually £6 before 11:30pm and £7 after. You can keep up to date on our paying queue length on our snapchat (wearecrisis) or <a class="links" href="https://www.twitter.com/ilove_crisis">twitter</a> feed.</div>
             </div>
           </div>   
         </div>
@@ -142,20 +142,147 @@
           </div>   
         </div>
       </div>
-
-
-
-    </div>
   </div>
 </div>
+
+<div>
+  
+</div>
+  <div class="container hidden-sm-up">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h3 class="spacer">Some FAQs for you first...</h3>
+      </div>
+    </div>
+    <div class="row">
+      
+      <div id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="card">
+          <div class="card-header" role="tab" id="headingOne">
+            <h5 class="mb-0">
+              <a data-toggle="collapsed" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+               <i class="fa fa-ticket fa-fw"></i> I can't find my ticket
+              </a>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="card-block">
+              No problem. You can get your tickets resent <a class="links" href="https://company.ticketscript.com/uk/ticket-buyers/">here</a>.If this doesn't work, please email ticketscript on <a class="links"href="mailto:support@ticketscript.co.uk">support@ticketscript.co.uk</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" role="tab" id="headingTwo">
+            <h5 class="mb-0">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <i class="fa fa-frown-o fa-fw"></i> I've lost my stuff and/or dignity
+              </a>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="card-block">
+              Sorry to hear that. You need to head to our <%= link_to 'lost-property', lostproperty_url, :class => "links"  %> page. Self respect is unlikely to be found.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" role="tab" id="headingThree">
+            <h5 class="mb-0">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <i class="fa fa-id-card-o fa-fw"></i> I have lost my ID. Will you let me in?
+              </a>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="card-block">
+              It happens. Sadly we can't help. It is entirely at the discretion of which security member you get on the night. Be nice, tell the truth and you are usually fine.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" role="tab" id="headingFour">
+            <h5 class="mb-0">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <i class="fa fa-users fa-fw"></i> My squad is not from Notts Uni
+              </a>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+            <div class="card-block">
+             We can't all be perfect. Not to worry, we accept any University student card. We also allow non-students when accompanied by a UoN carded student.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" role="tab" id="headingFive">
+            <h5 class="mb-0">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <i class="fa fa-ticket fa-fw"></i> Do you accept resold tickets?
+              </a>
+            </h5>
+          </div>
+          <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+            <div class="card-block">
+             No guarantees. Any tickets bought through resellers is done at the purchasers own risk.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" role="tab" id="headingSix">
+            <h5 class="mb-0">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <i class="fa fa-clock-o fa-fw"></i> 
+                 Can we extend our ticket times?
+              </a>
+            </h5>
+          </div>
+          <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
+            <div class="card-block">
+             Generally no. We make exceptions for sports teams with fixtures that are miles away - e.g. Aberdeen. Give us a shout by emailing <a class="links" href="mailto:info@carpenoctum.co.uk">info@carpenoctum.co.uk</a> and we will see what we can do.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" role="tab" id="headingSeven">
+            <h5 class="mb-0">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                <i class="fa fa-money fa-fw"></i> Can I pay on the door?
+              </a>
+            </h5>
+          </div>
+          <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven">
+            <div class="card-block">
+             Yes - Every week. It's usually £6 before 11:30pm and £7 after You can keep up to date on our paying queue length on our snapchat (wearecrisis) or <a class="links" href="https://www.twitter.com/ilove_crisis">twitter</a> feed.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" role="tab" id="headingEight">
+            <h5 class="mb-0">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                <i class="fa fa-money fa-fw"></i> Do you take card?
+              </a>
+            </h5>
+          </div>
+          <div id="collapseEight" class="collapse" role="tabpanel" aria-labelledby="headingEight">
+            <div class="card-block">
+             Yes. Both on entry and at the bars. There is also a cash machine inside if you are feeling old school.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 
 <div class="light-grey-band">
-  <div class="container">
+  <div class="container animated fadeIn">
     <div class="row contact-section">
       <div class="col-md-6">
-        <h3>Venue Address</h3>
+        <h3 class="red">Venue Address</h3>
         
         <address>
           Rock City<br>
@@ -164,10 +291,9 @@
           NG1 5GG<br>
         </address>
         
-        <p>Directions</p>
-
-
-
+        <h3 class="red">Opening Hours</h3>
+        <p>Wednesdays: 9:30pm - 3am <small>(times vary by event see the <%= link_to 'event page', events_url, :class => 'remove-deco' %> for more info)</small></p>
+        
         <p>
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
@@ -196,7 +322,7 @@
         </span> <%= link_to 'Lost your shit?', lostproperty_url, :class => "links" %>
         </p>
 
-        <h3>Our Office in Lenton</h3>
+        <h3 class="red">Our Office in Lenton</h3>
         
         <address>
           Carpe Noctum<br>
@@ -210,6 +336,7 @@
 
 
     <div class="col-md-6">
+      <h3 class="red">Contact Us</h3>
       <form>
         <div class="form-group">
           <label for="name">Your Name</label>
@@ -236,6 +363,12 @@
         <button type="submit" class="btn btn-primary">Submit</button>
         
       </form>
+        <div class="social-icons spacer">
+        <a href="https://www.facebook.com/ilovecrisis"><i class="fa fa-facebook-official fa-fw fa-3x" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/crisisnottingham"><i class="fa fa-instagram fa-fw fa-3x" aria-hidden="true"></i></a>
+        <a href="https://www.twitter.com/ilove_crisis"><i class="fa fa-twitter-square fa-fw fa-3x" aria-hidden="true"></i></a>
+        
+        </div>
       
       </div>
     </div>
@@ -280,8 +413,8 @@
       </div>
 
       <div class="col-md-4 text-center profile">
-        <%= image_tag("nicola.jpg", :alt => "Nicola Barker", :class => "rounded-circle") %>
-          <p class="lead">Nicola Barker</p>
+        <%= image_tag("nicola.jpg", :alt => "Nicola Tatler", :class => "rounded-circle") %>
+          <p class="lead">Nicola Tatler</p>
           <p>Marketing and Office Manager</p>
           <p>
           <span class="fa-stack fa-lg">
@@ -291,7 +424,7 @@
           <p><span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
-          </span> <a class="links" href="mailto:nicola.barker@carpenoctum.co.uk">nicola.barker@carpenoctum.co.uk</a></p>            
+          </span> <a class="links" href="mailto:nicola.barker@carpenoctum.co.uk">nicola.tatler@carpenoctum.co.uk</a></p>            
       </div>
   </div>
 </div>

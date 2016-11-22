@@ -25,4 +25,7 @@ class PageController < ApplicationController
 
   def lostproperty
   end
+
+  def termsandconditions
+  end
 end
