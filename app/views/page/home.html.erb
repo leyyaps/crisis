@@ -26,8 +26,8 @@
   <div class="container">
       <div class="row">
         <div class="col-md-12 text-block">
-          <h2 class="text-uppercase white-background">The UKs <span style="display: inline-block;" class="animated pulse infinite">Biggest</span> Weekly Student Night</h2>
-          <p class="lead text-center">Welcome to the <strong>biggest</strong> and <strong>best</strong> student night in the UK. Every Wednesday CRISIS take over Rock City to bring you the ultimate party and Official Wednesday Student Night for Nottingham University .</p>
+          <h2 class="text-uppercase headline">The UKs Biggest Weekly Student Night</h2>
+          <p class="lead text-center intro">Welcome to the <strong>biggest</strong> and <strong>best</strong> student night in the UK. Every Wednesday CRISIS take over Rock City to bring you the ultimate party and Official Wednesday Student Night for Nottingham University .</p>
         </div>
       </div>
   </div>   
@@ -42,7 +42,7 @@
         <%= image_tag event.main_image_url(:thumb), :class =>"img-fluid card-img-top", :alt => "CRISIS Event" if index <= 3 %>
         <div class="card-block text-block">
           <h4 class="card-title text-uppercase"><%= event.name %></h4>
-          <h6 class="text-uppercase card-event-date"><%= event.date.strftime("%d/%m/%Y") %></h6>
+          <h6 class="text-uppercase card-event-date"><%= event.date.strftime("%d.%m.%Y") %></h6>
           <p class="card-text"><%= event.short_description %></p>
           <%= link_to 'Tickets', tickets_url, :class =>'btn btn-primary text-uppercase' %>
         </div>
