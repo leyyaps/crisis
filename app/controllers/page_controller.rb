@@ -23,8 +23,7 @@ class PageController < ApplicationController
     @info_messages = InfoMessage.all
   end
 
-  def lostproperty
-  end
+  
 
   def termsandconditions
   end

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :posts, only: [:index]
   
 
@@ -9,13 +10,21 @@ Rails.application.routes.draw do
 
   get 'about' => 'page#about'
 
-  get 'contact' => 'page#contact'
+  match '/contact', to:'contacts#new', via:'get', :as => :contact
+  resources "contacts", only: [:new, :create]
+
+
+  match '/lostproperty',     to: 'lost_properties#new', via: 'get', :as => :lostproperty
+  resources "lostproperties", only: [:new, :create]
+
+
+ 
 
   get 'socials' => 'page#socials'
 
   get 'tickets' => 'page#tickets'
 
-  get 'lostproperty' =>'page#lostproperty'
+  
 
   get 'jobs' => 'page#jobs'
 

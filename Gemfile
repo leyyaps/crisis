@@ -20,6 +20,11 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'high_voltage', '~> 3.0.0'
 
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-passenger'
+gem 'capistrano-rvm'
+
 gem 'mail_form'
 gem 'simple_form'
 
