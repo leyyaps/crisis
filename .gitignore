@@ -23,4 +23,5 @@
 
 .env
 Procfile
-
+config/database.yml
+config/secrets.yml
