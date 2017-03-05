@@ -5,10 +5,10 @@ require "capistrano/setup"
 require "capistrano/deploy"
 
 require 'capistrano/rails'
-require 'capistrano/passenger'
+
 require 'capistrano/rvm'
  set :rvm_type, :user
- set :rvm_ruby_version, '2.3.1'
+ set :rvm_ruby_version, '2.2.2'
 
 # Load the SCM plugin appropriate to your project:
 #
